@@ -14,6 +14,15 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Hledger.Sed.TransactionM
+  exposed-modules:     Hledger.Data.Lenses
+                     , Hledger.Sed
+  other-modules:       Hledger.Data.Lenses.Helper
   build-depends:       base >= 4.7 && < 5
+                     , mtl >= 2.2 && < 2.3
+                     , hledger-lib >= 1.5 && <1.6
+                     , microlens-platform
+                     , template-haskell
+                     , regex-tdfa
+                     , text
   default-language:    Haskell2010
+  ghc-options:         -Wall
