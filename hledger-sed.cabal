@@ -1,0 +1,19 @@
+name:                hledger-sed
+version:             0.1.0.0
+-- synopsis:
+-- description:
+license:             BSD3
+license-file:        LICENSE
+author:              Hans-Peter Deifel
+maintainer:          hpd@hpdeifel.de
+copyright:           2018 Hans-Peter Deifel
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Hledger.Sed.TransactionM
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
