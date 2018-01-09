@@ -11,6 +11,10 @@ category:            Finance, Console
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
+                     
+flag examples
+  description:       Build examples
+  default:           False
 
 library
   hs-source-dirs:      src
@@ -26,3 +30,17 @@ library
                      , text
   default-language:    Haskell2010
   ghc-options:         -Wall
+
+  
+executable example
+  hs-source-dirs:      example
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , hledger-import-dsl
+                     , microlens-platform
+                     , hledger-lib >= 1.5 && <1.6
+                     , text
+                     , Decimal
+  if !flag(examples)
+    buildable:         False
