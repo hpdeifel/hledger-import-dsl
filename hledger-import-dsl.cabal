@@ -1,13 +1,13 @@
-name:                hledger-sed
+name:                hledger-import-dsl
 version:             0.1.0.0
--- synopsis:
+synopsis:            CSV import rules for hledger in Haskell
 -- description:
 license:             BSD3
 license-file:        LICENSE
 author:              Hans-Peter Deifel
 maintainer:          hpd@hpdeifel.de
 copyright:           2018 Hans-Peter Deifel
-category:            Web
+category:            Finance, Console
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Hledger.Data.Lenses
-                     , Hledger.Sed
+                     , Hledger.Import
   other-modules:       Hledger.Data.Lenses.Helper
   build-depends:       base >= 4.7 && < 5
                      , mtl >= 2.2 && < 2.3

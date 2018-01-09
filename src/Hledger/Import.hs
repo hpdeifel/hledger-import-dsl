@@ -1,6 +1,6 @@
 {-# LANGUAGE LambdaCase #-}
 
-module Hledger.Sed
+module Hledger.Import
   ( TransactionM
   , Rule
   , rule
