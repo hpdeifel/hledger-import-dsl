@@ -8,6 +8,17 @@ hledger. It provides a simple lensy DSL that somewhat resembles
 hledger's own import rules but is more powerful as it embeds arbitrary
 Haskell.
 
+## Usage
+
+1. Create a `.rules` file that allows hledger to import the CSV and
+   generates transactions which contain all fields that you'd want to
+   match on in the description.
+   
+2. Write a Haskell program using the DSL provided by this library (see
+   example below).
+   
+3. Run your program: `programname CSVFILE`
+
 ## Example
 
 ```haskell
